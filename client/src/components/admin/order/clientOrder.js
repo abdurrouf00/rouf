@@ -8,6 +8,7 @@ const AdminOrders = () => {
 
   const fetchOrders = async () => {
     try {
+      console.log(Backend_Url)
       const res = await axios.get(`${Backend_Url}/api/orders/all`);
       setOrders(res.data);
     } catch (error) {

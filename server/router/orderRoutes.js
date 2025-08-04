@@ -3,7 +3,7 @@ const {
   placeOrder,
   getAllOrders,
   deleteOrder,
-  updateOrderStatus,
+  
 } = require("../controllers/orderController");
 
 const router = express.Router();
