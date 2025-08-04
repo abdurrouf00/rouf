@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useCart } from "../context/cartContext";
+import {Backend_Url} from "../../config/config"
 import axios from "axios";
 
 const OrderPage = () => {
@@ -8,7 +9,7 @@ const OrderPage = () => {
     name: "",
     address: "",
     phone: "",
-    paymentMethod: "cod",
+    paymentMethod: "Cod",
   });
 
   const total = cartItems?.reduce((sum, item) => sum + item.price, 0) || 0;
@@ -25,7 +26,7 @@ const OrderPage = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:4005/api/orders/create", {
+      const res = await axios.post(`${Backend_Url}/api/orders/create`, {
         ...formData,
         cartItems,
       });
@@ -74,7 +75,7 @@ const OrderPage = () => {
         onChange={(e) => setFormData({ ...formData, paymentMethod: e.target.value })}
         className="border px-2 py-1 w-full"
       >
-        <option value="cod">Cash on Delivery</option>
+        <option value="Cod">Cash on Delivery</option>
         <option value="bkash">bKash</option>
       </select>
       <p>Total: ৳{total}</p>

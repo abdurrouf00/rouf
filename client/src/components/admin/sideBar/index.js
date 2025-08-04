@@ -33,6 +33,14 @@ const Sidebar = () => {
               messages
             </Link>
           </li>
+          <li className="mt-4">
+            <Link
+              to="/admin/order"
+              className="block px-4 py-2 hover:bg-gray-700 rounded"
+            >
+              Order
+            </Link>
+          </li>
 
           <li className="mt-2">
             <Link

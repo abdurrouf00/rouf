@@ -7,6 +7,7 @@ import Product from "../../components/admin/products/productAll";
 import AddProduct from "../../components/admin/addProduct/addProduct";
 import EditProduct from "../../components/admin/EditProduct/EditProduct";
 import AdminMessagesList from "../../components/admin/AdminMessages/AdminMessages";
+import ClientOrder from "../../components/admin/order/clientOrder"
 
 
 
@@ -18,6 +19,7 @@ function AdminRouter() {
         
         <Route path="product" element={<Product />} />
         <Route path="messages" element={<AdminMessagesList />} />
+        <Route path="order" element={<ClientOrder />} />
         <Route path="add-product" element={<AddProduct />} />
         <Route path="edit-product/:id" element={<EditProduct />} />
          

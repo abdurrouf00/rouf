@@ -1,6 +1,7 @@
 // src/pages/CartPage.jsx
 import React from "react";
 import { useCart } from "../context/cartContext";
+import { Backend_Url } from "../../config/config";
 import { Link } from "react-router-dom";
 
 const CartPage = () => {
@@ -30,7 +31,7 @@ const CartPage = () => {
                 <tr key={item._id}>
                   <td className="py-3 px-4 border flex items-center gap-4">
                     <img
-                      src={`http://localhost:4005/uploads/${item.images[0]}`}
+                      src={`${Backend_Url}/uploads/${item.images[0]}`}
                       alt={item.name}
                       className="w-16 h-16 object-cover rounded"
                     />
