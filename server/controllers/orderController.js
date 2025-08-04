@@ -1,27 +1,37 @@
 const Order = require("../model/order");
 
-exports.createOrder = async (req, res) => {
+// Place order
+exports.placeOrder = async (req, res) => {
   try {
-    const { name, address, phone, paymentMethod, cartItems } = req.body;
-    if (!cartItems || cartItems.length === 0) {
-      return res.status(400).json({ error: "Cart is empty" });
-    }
-    const newOrder = new Order({
-      name,
-      address,
-      phone,
-      paymentMethod,
-      items: cartItems.map(item => ({
-        productId: item._id,
-        name: item.name,
-        price: item.price,
-        image: item.images && item.images[0] ? item.images[0] : "",
-      })),
-    });
+    const newOrder = new Order(req.body);
     await newOrder.save();
     res.status(201).json({ message: "Order placed successfully!" });
   } catch (err) {
-    console.error("Order Error:", err);
     res.status(500).json({ error: "Failed to place order." });
   }
 };
+
+// Get all orders
+exports.getAllOrders = async (req, res) => {
+  try {
+    const orders = await Order.find().sort({ createdAt: -1 });
+    res.json(orders);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch orders." });
+  }
+};
+
+// Delete order
+exports.deleteOrder = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deletedOrder = await Order.findByIdAndDelete(id);
+    if (!deletedOrder) {
+      return res.status(404).json({ message: "Order not found" });
+    }
+    res.json({ message: "Order deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: "Failed to delete order" });
+  }
+};
+
