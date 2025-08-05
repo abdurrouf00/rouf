@@ -28,7 +28,7 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/orders", orderRoutes);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to Product API</h1>");
+  res.send("<h1>Welcome to Product API project</h1>");
 });
 
 // 404 Handler
