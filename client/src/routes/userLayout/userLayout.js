@@ -6,9 +6,9 @@ import Footer from "../../components/footer/footer";
 
 import Home from "../../components/home/home";
 import About from "../../components/about/about";
-import Skills from "../../components/skills/skills";
+
 import Contact from "../../components/contact/contact";
-import Career from "../../components/career/career";
+
 import Register from "../../components/userEntry/register";
 import Login from "../../components/userEntry/login";
 import Error from "../../components/error/error";
@@ -23,9 +23,9 @@ function UserRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/skills" element={<Skills />} />
+    
         <Route path="/contact" element={<Contact />} />
-        <Route path="/career" element={<Career />} />
+       
         <Route path="/products" element={<ProductList />} />
         <Route path="/card" element={<Card/>}/>
         <Route path="/order" element={<Order/>}/>

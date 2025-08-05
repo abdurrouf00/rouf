@@ -1,6 +1,7 @@
+// src/context/CartContext.js
 import React, { createContext, useContext, useState } from "react";
 
-export const CartContext = createContext();  // এখানে export যোগ করো
+export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);

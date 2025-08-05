@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Backend_Url } from "../../config/config";
+import { useCart } from "../context/cartContext";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // Modal state
   const [modalImage, setModalImage] = useState(null);
+  const { addToCart } = useCart(); // ✅ Use context
 
   useEffect(() => {
     fetch(`${Backend_Url}/api/products`)
@@ -29,13 +29,12 @@ const ProductList = () => {
   if (error) return <p className="text-center mt-6 text-red-600">Error: {error}</p>;
 
   return (
-   <div className="max-w-screen-xl mx-auto px-4 sm:px-5 lg:px-6 xl:px-10 2xl:px-1 py-10 mt-20">
-
+    <div className="max-w-screen-xl mx-auto px-4 py-10 mt-20">
       <h2 className="text-3xl font-bold mb-8 text-center">Available Products</h2>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.slice(0, 8).map((product) => (
+        {products.slice(0, 8).map((product) => (
           <div key={product._id} className="border rounded p-4 shadow bg-white">
-           
             {product.images && product.images.length > 0 && (
               <img
                 src={`${Backend_Url}/uploads/${product.images[0]}`}
@@ -44,11 +43,16 @@ const ProductList = () => {
                 onClick={() => setModalImage(`${Backend_Url}/uploads/${product.images[0]}`)}
               />
             )}
-             <div className="text-center">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className=" font-bold">Price: ${product.price}</p>
-                <button className="bg-gray-600 text-white px-8 py-1 rounded hover:bg-gray-700 mt-4">Add To Card</button>
-             </div>
+            <div className="text-center">
+              <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+              <p className="font-bold">Price: ${product.price}</p>
+              <button
+                onClick={() => addToCart(product)} // ✅ Add to cart
+                className="bg-gray-600 text-white px-8 py-1 rounded hover:bg-gray-700 mt-4"
+              >
+                Add To Cart
+              </button>
+            </div>
           </div>
         ))}
       </div>

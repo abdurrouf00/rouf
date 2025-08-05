@@ -55,7 +55,7 @@ const EditProduct = () => {
       });
       toast.success("✅ Product Updated");
       setTimeout(() => {
-        navigate("/admin/products");
+        navigate("/admin/product");
       }, 1500);
     } catch (err) {
       console.error("Update error:", err);

@@ -10,11 +10,9 @@ function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <Routes>
-          {/* Admin রাউট অবশ্যই /admin/* দিতে হবে */}
+        <Routes>         
           <Route path="/admin/*" element={<AdminRouter />} />
-
-          {/* অন্য সব রাউট ইউজার রাউট */}
+                  
           <Route path="/*" element={<UserRouter />} />
         </Routes>
       </BrowserRouter>
