@@ -33,7 +33,7 @@ const ProductList = () => {
       <h2 className="text-3xl font-bold mb-8 text-center">Available Products</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.slice(0, 8).map((product) => (
+        {products.slice(4, 12).map((product) => (
           <div key={product._id} className="border rounded p-4 shadow bg-white">
             {product.images && product.images.length > 0 && (
               <img

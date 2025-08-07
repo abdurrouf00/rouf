@@ -14,7 +14,7 @@ const home = () => {
       <Products/>
   
 
-    
+    <img src="images/banner2.jpg" alt="keep your family healthy " />
     
     </div>
   )

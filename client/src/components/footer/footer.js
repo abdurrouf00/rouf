@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-bold mb-4 text-white">About</h3>
           <p className="text-lg leading-relaxed">
-            Binni Food is an online grocery shop. We provide Pure and Healthy Food Service in Bangladesh.
+            Jomunar char Food is an online grocery shop. We provide Pure and Healthy Food Service in Bangladesh.
             Our mission is to make the food industry of Bangladesh free of adulteration and deliver organic food to every door.
           </p>
         </div>
@@ -43,9 +43,9 @@ const Footer = () => {
   <span>01753142800</span>
 </div>
     </a>
-            <p>Mobile: 01841878691</p>
-            <p>Email: <a href="mailto:hello@binnifood.com" className="text-blue-300 hover:underline">hello@binnifood.com</a></p>
-            <p>Address: Jhopgari Uttarpara, Ward No 17, Bogura 5800</p>
+            <p>Mobile: 01753142800</p>
+            <p>Email: <a href="mailto:rouf82244@gmail.com" className="text-blue-300 hover:underline">rouf82244@gmail.com</a></p>
+            <p>Address: Kaizury, Shahjadpur, Sirajganj</p>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-2 text-xl ">
             <a
               href="https://facebook.com"
-              target="_blank"
+              target="https://www.facebook.com/jomunarchar"
               rel="noreferrer"
               className="text-gray-300 hover:text-white underline"
             >
@@ -91,7 +91,7 @@ const Footer = () => {
 
       {/* Bottom text */}
       <div className="mt-3 p-6 text-center text-lg text-white  bg-black">
-        &copy; {new Date().getFullYear()} Binni Food. All rights reserved.
+        &copy; {new Date().getFullYear()} Jomunar char Food. All rights reserved.
       </div>
     </footer>
   );

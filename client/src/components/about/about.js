@@ -1,36 +1,40 @@
-import React from 'react';
-
-const AboutMe = () => {
+const AboutUs = () => {
   return (
-    <div className="pt-20 pb-20 bg-gray-100">
-  <h2 className="text-4xl font-bold mb-6 text-gray-800 text-center">About Me</h2>
-  <section className="max-w-4xl mx-auto p-10 bg-white rounded-lg shadow-md text-center">
-    <p className="mb-4 text-gray-700 leading-relaxed">
-      I'm a passionate fullstack developer with over 5 years of experience building web applications and services. My journey in software development began during my computer science studies, where I discovered my love for creating elegant solutions to complex problems.
-    </p>
-    <p className="mb-4 text-gray-700 leading-relaxed">
-      Currently, I work as a Senior Software Engineer at TechCorp, where I lead development on our core platform. I specialize in building scalable applications using React, Node.js, and AWS, with a strong focus on code quality and user experience.
-    </p>
-    <p className="mb-6 text-gray-700 leading-relaxed">
-      When I'm not coding, you can find me contributing to open source projects, writing technical articles, or exploring new technologies. I'm particularly interested in serverless architectures, WebAssembly, and the future of web development.
-    </p>
+    <section className="max-w-4xl mx-auto p-6 bg-white rounded-md shadow-md my-10 mt-20">
+      <h2 className="text-3xl font-bold mb-6 text-green-700">আমাদের সম্পর্কে</h2>
 
-    {/* Social Links */}
-    <div className="flex justify-center space-x-6 text-blue-600 text-lg">
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">
-        GitHub
-      </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">
-        LinkedIn
-      </a>
-      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">
-        Twitter
-      </a>
-    </div>
-  </section>
-</div>
+      <p className="text-lg leading-relaxed mb-4 text-gray-800">
+        <strong>Jomunar Char</strong> হল এক বিশুদ্ধ প্রাকৃতিক পণ্যের ব্র্যান্ড, যেখানে প্রকৃতির
+        উপহার আর আমাদের মাটির সংস্কৃতি একসাথে মিলেমিশে রয়েছে। আমরা আপনাদের জন্য সরাসরি
+        জমুনার চরের গ্রামীণ এলাকার থেকে নিয়ে আসি খাঁটি <strong>ঘি, দুধ, সরিষার তেল</strong> ও
+        <strong> খাঁটি মধু</strong> — যা সম্পূর্ণ নিঃস্বার্থ, ভেজালমুক্ত ও স্বাস্থ্যসম্মত।
+      </p>
 
+      <p className="text-lg leading-relaxed mb-4 text-gray-800">
+        আমাদের লক্ষ্য হচ্ছে সবার ঘরে পৌঁছে দেওয়া দেশি, স্বাস্থ্যকর ও নির্ভেজাল খাবার। আমরা
+        গর্বের সাথে বলতে পারি, আমাদের প্রতিটি পণ্য তৈরি হয় গ্রামের ক্ষুদ্র চাষীদের সঙ্গে
+        সরাসরি কাজ করে, যার ফলে তাদের জীবনমান উন্নত হয় এবং বাংলাদেশের ঐতিহ্যবাহী খাদ্য
+        সংস্কৃতির সুরক্ষা হয়।
+      </p>
+
+      <p className="text-lg leading-relaxed mb-4 text-gray-800">
+        <em>“ভাল খাবার, সুস্থ জীবন”</em> এই বিশ্বাসকে সামনে রেখে, আমরা প্রতিটি অর্ডারকে
+        যত্নসহকারে প্রস্তুত করি এবং সময়মতো আপনাদের কাছে পৌঁছে দিই।
+      </p>
+
+      <h3 className="text-2xl font-semibold mt-8 mb-4 text-green-600">আমাদের পণ্যসমূহ</h3>
+      <ul className="list-disc list-inside text-gray-700 space-y-2">
+        <li>খাঁটি দেশি ঘি</li>
+        <li>ফার্ম-ফ্রেশ গরুর দুধ</li>
+        <li>বিশুদ্ধ সরিষার তেল</li>
+        <li>প্রাকৃতিক ও খাঁটি মধু</li>
+      </ul>
+
+      <p className="mt-6 text-gray-800 font-medium">
+        আপনিও আমাদের সাথে যুক্ত হয়ে উপভোগ করুন প্রকৃতির খাঁটি স্বাদ আর ভালোবাসার ছোঁয়া।
+      </p>
+    </section>
   );
 };
 
-export default AboutMe;
+export default AboutUs;

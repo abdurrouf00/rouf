@@ -36,8 +36,7 @@ const ProductList = () => {
         {products.map((product) => (
           <div key={product._id} className="border rounded p-4 shadow bg-white">
             {product.images && product.images.length > 0 && (
-              <img
-                src={`${Backend_Url}/uploads/${product.images[0]}`}
+              <img src={`${Backend_Url}/uploads/${product.images[0]}`}
                 alt={product.name}
                 className="mt-2 rounded w-full h-52 object-cover cursor-pointer"
                 onClick={() => setModalImage(`${Backend_Url}/uploads/${product.images[0]}`)}
